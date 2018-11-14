@@ -15,12 +15,8 @@ github "weixinbing/YQExtensions"
 
 编译 framework：
 
-终端运行 `carthage update`。
-
-编译 DEBUG 版本，开启运行时路由检查：
-
-终端运行 `carthage update --configuration Debug`
-
-记得不要把 debug 版本的库用在 release 版本的 app 中。一定要在 release 版本的 app 中使用 release 版本的库。
+```
+$ carthage update
+```
 
 如果这是你首次在项目中使用 Carthage，你将需要进行一些额外的步骤，它们在 [Carthage](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) 中有解释。
