@@ -269,8 +269,47 @@ public extension String {
     ///
     ///        "101".int -> 101
     ///
-    public var int: Int? {
-        return Int(self)
+    public var int: Int {
+        let str = self
+        if str.isEmpty {
+            return 0
+        }
+        
+        let ＋: Int8 = 43
+        let －: Int8 = 45
+        let ascii0: Int8 = 48
+        let ascii9: Int8 = 57
+        let space: Int8 = 32
+        
+        
+        var sign: Int = 1
+        
+        var result: Int = 0
+        
+        let chars = str.utf8CString
+        
+        var i: Int = 0
+        
+        while chars[i] == space {
+            i += 1
+        }
+        
+        if chars[i] == ＋ || chars[i] == － {
+            sign = chars[i] == － ? -1 : 1
+            i += 1
+        }
+        
+        while i < chars.count - 1, ascii0...ascii9 ~= chars[i] {
+            
+            if result > Int64.max / 10 || (result == Int64.max / 10 && Int(chars[i] - ascii0) > 7) {
+                return sign == 1 ? Int(Int64.max) : Int(Int64.min)
+            }
+            
+            result = result * 10 +  Int(chars[i] - ascii0)
+            i += 1
+        }
+        
+        return result * sign
     }
     
     /// SwifterSwift: Lorem ipsum string of given length.
