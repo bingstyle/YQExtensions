@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2D4AC99122127282005E6FE2 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AC99022127281005E6FE2 /* DoubleExtension.swift */; };
 		2D4AC9932212741E005E6FE2 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AC9922212741E005E6FE2 /* CGFloatExtension.swift */; };
+		2D4AC996221277D0005E6FE2 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AC9922212741E005E6FE2 /* CGFloatExtension.swift */; };
+		2D4AC997221277D0005E6FE2 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AC99022127281005E6FE2 /* DoubleExtension.swift */; };
 		2DBC8678219BF9A5000B1530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC8677219BF9A5000B1530 /* AppDelegate.swift */; };
 		2DBC867A219BF9A5000B1530 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC8679219BF9A5000B1530 /* ViewController.swift */; };
 		2DBC867D219BF9A5000B1530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC867B219BF9A5000B1530 /* Main.storyboard */; };
@@ -306,6 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4AC996221277D0005E6FE2 /* CGFloatExtension.swift in Sources */,
+				2D4AC997221277D0005E6FE2 /* DoubleExtension.swift in Sources */,
 				2DBC86B0219BFB83000B1530 /* UIButtonExtension.swift in Sources */,
 				2DBC86B1219BFB83000B1530 /* UIAlertControllerExtension.swift in Sources */,
 				2DBC86B2219BFB83000B1530 /* UIImageViewExtension.swift in Sources */,
