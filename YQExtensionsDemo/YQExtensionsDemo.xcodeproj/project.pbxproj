@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4AC99122127282005E6FE2 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AC99022127281005E6FE2 /* DoubleExtension.swift */; };
+		2D4AC9932212741E005E6FE2 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AC9922212741E005E6FE2 /* CGFloatExtension.swift */; };
 		2DBC8678219BF9A5000B1530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC8677219BF9A5000B1530 /* AppDelegate.swift */; };
 		2DBC867A219BF9A5000B1530 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC8679219BF9A5000B1530 /* ViewController.swift */; };
 		2DBC867D219BF9A5000B1530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC867B219BF9A5000B1530 /* Main.storyboard */; };
@@ -60,6 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D4AC99022127281005E6FE2 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		2D4AC9922212741E005E6FE2 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		2DBC8674219BF9A5000B1530 /* YQExtensionsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQExtensionsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBC8677219BF9A5000B1530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DBC8679219BF9A5000B1530 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,24 +157,26 @@
 		2DBC869D219BFB78000B1530 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2DBC869E219BFB78000B1530 /* UIButtonExtension.swift */,
-				2DBC869F219BFB78000B1530 /* UIAlertControllerExtension.swift */,
-				2DBC86A0219BFB78000B1530 /* UIImageViewExtension.swift */,
-				2DBC86A1219BFB78000B1530 /* UIColorExtension.swift */,
-				2DBC86A2219BFB78000B1530 /* UITextViewExtension.swift */,
-				2DBC86A3219BFB78000B1530 /* UITextFieldExtension.swift */,
-				2DBC86A4219BFB78000B1530 /* UILabelExtension.swift */,
+				2DBC86AF219BFB78000B1530 /* ActionExtension.swift */,
+				2DBC86AB219BFB78000B1530 /* BlockGestureExtension.swift */,
+				2D4AC9922212741E005E6FE2 /* CGFloatExtension.swift */,
+				2DBC86AE219BFB78000B1530 /* DateExtension.swift */,
+				2D4AC99022127281005E6FE2 /* DoubleExtension.swift */,
+				2DBC86A8219BFB78000B1530 /* FileManagerExtension.swift */,
 				2DBC86A5219BFB78000B1530 /* StackOrQueueExtension.swift */,
+				2DBC86AC219BFB78000B1530 /* StringExtension.swift */,
+				2DBC869F219BFB78000B1530 /* UIAlertControllerExtension.swift */,
+				2DBC869E219BFB78000B1530 /* UIButtonExtension.swift */,
+				2DBC86A1219BFB78000B1530 /* UIColorExtension.swift */,
+				2DBC86A9219BFB78000B1530 /* UIDeviceExtension.swift */,
+				2DBC86AD219BFB78000B1530 /* UIImageExtension.swift */,
+				2DBC86A0219BFB78000B1530 /* UIImageViewExtension.swift */,
+				2DBC86A4219BFB78000B1530 /* UILabelExtension.swift */,
+				2DBC86AA219BFB78000B1530 /* UITabBarControllerExtension.swift */,
+				2DBC86A3219BFB78000B1530 /* UITextFieldExtension.swift */,
+				2DBC86A2219BFB78000B1530 /* UITextViewExtension.swift */,
 				2DBC86A6219BFB78000B1530 /* UIViewExtension.swift */,
 				2DBC86A7219BFB78000B1530 /* URLExtension.swift */,
-				2DBC86A8219BFB78000B1530 /* FileManagerExtension.swift */,
-				2DBC86A9219BFB78000B1530 /* UIDeviceExtension.swift */,
-				2DBC86AA219BFB78000B1530 /* UITabBarControllerExtension.swift */,
-				2DBC86AB219BFB78000B1530 /* BlockGestureExtension.swift */,
-				2DBC86AC219BFB78000B1530 /* StringExtension.swift */,
-				2DBC86AD219BFB78000B1530 /* UIImageExtension.swift */,
-				2DBC86AE219BFB78000B1530 /* DateExtension.swift */,
-				2DBC86AF219BFB78000B1530 /* ActionExtension.swift */,
 			);
 			name = Extensions;
 			path = ../Extensions;
@@ -289,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4AC99122127282005E6FE2 /* DoubleExtension.swift in Sources */,
 				2DBC867A219BF9A5000B1530 /* ViewController.swift in Sources */,
+				2D4AC9932212741E005E6FE2 /* CGFloatExtension.swift in Sources */,
 				2DBC8678219BF9A5000B1530 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
