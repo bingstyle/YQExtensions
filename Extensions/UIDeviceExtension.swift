@@ -10,11 +10,19 @@ import UIKit
 
 public extension UIDevice {
     
-    public static func isX() -> Bool {
-        if UIScreen.main.bounds.height == 812 {
-            return true
+    public static func isIPhoneXSeries() -> Bool {
+        var flag = false
+        if UIDevice.current.userInterfaceIdiom != UIUserInterfaceIdiom.phone {
+            return false
         }
-        return false
+        
+        if #available(iOS 11.0, OSX 10.10, *) {
+            if let mainWindow = UIApplication.shared.delegate?.window as? UIWindow {
+                if mainWindow.safeAreaInsets.bottom > 0.0 {
+                    flag = true
+                }
+            }
+        }
+        return flag
     }
-    
 }

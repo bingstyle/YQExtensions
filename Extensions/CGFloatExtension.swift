@@ -24,7 +24,7 @@ public extension CGFloat {
     // ~= 44
     static func navigationBar(_ controller: UIViewController?) -> CGFloat {
         if let navi = controller?.navigationController {
-            return navi.navigationBar.frame.height
+            return navi.navigationBar.frame.height + statusBar()
         }
         return 0
     }

@@ -163,7 +163,7 @@ public extension UITextField {
     /// - Parameter color: placeholder text color.
     public func setPlaceHolderTextColor(_ color: UIColor) {
         guard let holder = placeholder, !holder.isEmpty else { return }
-        self.attributedPlaceholder = NSAttributedString(string: holder, attributes: [.foregroundColor: color])
+        attributedPlaceholder = NSAttributedString(string: holder, attributes: [.foregroundColor: color])
     }
     
     /// SwifterSwift: Add padding to the left of the textfield rect.
@@ -183,9 +183,9 @@ public extension UITextField {
     public func addPaddingLeftIcon(_ image: UIImage, padding: CGFloat) {
         let imageView = UIImageView(image: image)
         imageView.contentMode = .left
-        self.leftView = imageView
-        self.leftView?.frame.size = CGSize(width: image.size.width + padding, height: self.bounds.size.height)
-        self.leftViewMode = .always
+        leftView = imageView
+        leftView?.frame.size = CGSize(width: image.size.width + padding, height: bounds.size.height)
+        leftViewMode = .always
     }
     
 }
