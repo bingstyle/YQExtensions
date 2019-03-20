@@ -10,7 +10,17 @@ import UIKit
 
 // MARK: - Properties
 public extension String {
-    
+    // 中文转拼音
+    public func toPinyin() -> String {
+        let stringRef = NSMutableString(string: self) as CFMutableString
+        // 转换为带音标的拼音
+        CFStringTransform(stringRef,nil, kCFStringTransformToLatin, false)
+        // 去掉音标
+        CFStringTransform(stringRef, nil, kCFStringTransformStripCombiningMarks, false)
+        let pinyin = stringRef as String
+        // 去掉空格
+        return pinyin.replacingOccurrences(of: " ", with: "")
+    }
     /// SwifterSwift: String decoded from base64 (if applicable).
     ///
     ///        "SGVsbG8gV29ybGQh".base64Decoded = Optional("Hello World!")
@@ -345,7 +355,9 @@ public extension String {
     public var trimmed: String {
         return trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    
+    public var trimSpace: String {
+        return replacingOccurrences(of: " ", with: "")
+    }
     /// SwifterSwift: Readable string from a URL string.
     ///
     ///        "it's%20easy%20to%20decode%20strings".urlDecoded -> "it's easy to decode strings"
@@ -760,7 +772,6 @@ public extension String {
     public mutating func trim() {
         self = trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
-    
     /// SwifterSwift: Truncate string (cut it to a given number of characters).
     ///
     ///        var str = "This is a very long sentence"

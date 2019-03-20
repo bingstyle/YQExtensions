@@ -34,6 +34,7 @@ public extension UILabel {
         let paragraphStyle = NSMutableParagraphStyle.init()
         paragraphStyle.lineSpacing = lineSpace
         paragraphStyle.alignment = .justified
+        paragraphStyle.lineBreakMode = .byTruncatingTail
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, text.charactersArray.count))
         self.attributedText = attributedString
         self.sizeToFit()
