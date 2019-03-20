@@ -37,6 +37,7 @@
 		2DBC86BF219BFB83000B1530 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC86AD219BFB78000B1530 /* UIImageExtension.swift */; };
 		2DBC86C0219BFB83000B1530 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC86AE219BFB78000B1530 /* DateExtension.swift */; };
 		2DBC86C1219BFB83000B1530 /* ActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC86AF219BFB78000B1530 /* ActionExtension.swift */; };
+		2DBE7A292227CC5E0022FB9A /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE7A282227CC5E0022FB9A /* UIApplicationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		2DBC86AD219BFB78000B1530 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		2DBC86AE219BFB78000B1530 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		2DBC86AF219BFB78000B1530 /* ActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionExtension.swift; sourceTree = "<group>"; };
+		2DBE7A282227CC5E0022FB9A /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				2DBC86A5219BFB78000B1530 /* StackOrQueueExtension.swift */,
 				2DBC86AC219BFB78000B1530 /* StringExtension.swift */,
 				2DBC869F219BFB78000B1530 /* UIAlertControllerExtension.swift */,
+				2DBE7A282227CC5E0022FB9A /* UIApplicationExtension.swift */,
 				2DBC869E219BFB78000B1530 /* UIButtonExtension.swift */,
 				2DBC86A1219BFB78000B1530 /* UIColorExtension.swift */,
 				2DBC86A9219BFB78000B1530 /* UIDeviceExtension.swift */,
@@ -299,6 +302,7 @@
 			files = (
 				2D4AC99122127282005E6FE2 /* DoubleExtension.swift in Sources */,
 				2DBC867A219BF9A5000B1530 /* ViewController.swift in Sources */,
+				2DBE7A292227CC5E0022FB9A /* UIApplicationExtension.swift in Sources */,
 				2D4AC9932212741E005E6FE2 /* CGFloatExtension.swift in Sources */,
 				2DBC8678219BF9A5000B1530 /* AppDelegate.swift in Sources */,
 			);
