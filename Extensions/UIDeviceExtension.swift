@@ -8,9 +8,9 @@
 
 import UIKit
 
-public extension UIDevice {
+extension UIDevice {
     
-    public static func isIPhoneXSeries() -> Bool {
+    static func isIPhoneXSeries() -> Bool {
         var flag = false
         if UIDevice.current.userInterfaceIdiom != UIUserInterfaceIdiom.phone {
             return false

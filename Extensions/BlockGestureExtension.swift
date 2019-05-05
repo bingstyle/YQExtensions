@@ -14,11 +14,11 @@ import UIKit
 open class BlockTap: UITapGestureRecognizer {
     private var tapAction: ((UITapGestureRecognizer) -> Void)?
     
-    public override init(target: Any?, action: Selector?) {
+    override init(target: Any?, action: Selector?) {
         super.init(target: target, action: action)
     }
     
-    public convenience init (
+    convenience init (
         tapCount: Int = 1,
         fingerCount: Int = 1,
         action: ((UITapGestureRecognizer) -> Void)?) {
@@ -43,11 +43,11 @@ open class BlockTap: UITapGestureRecognizer {
 open class BlockPan: UIPanGestureRecognizer {
     private var panAction: ((UIPanGestureRecognizer) -> Void)?
     
-    public override init(target: Any?, action: Selector?) {
+    override init(target: Any?, action: Selector?) {
         super.init(target: target, action: action)
     }
     
-    public convenience init (action: ((UIPanGestureRecognizer) -> Void)?) {
+    convenience init (action: ((UIPanGestureRecognizer) -> Void)?) {
         self.init()
         self.panAction = action
         self.addTarget(self, action: #selector(BlockPan.didPan(_:)))
@@ -61,11 +61,11 @@ open class BlockPan: UIPanGestureRecognizer {
 open class BlockPinch: UIPinchGestureRecognizer {
     private var pinchAction: ((UIPinchGestureRecognizer) -> Void)?
     
-    public override init(target: Any?, action: Selector?) {
+    override init(target: Any?, action: Selector?) {
         super.init(target: target, action: action)
     }
     
-    public convenience init (action: ((UIPinchGestureRecognizer) -> Void)?) {
+    convenience init (action: ((UIPinchGestureRecognizer) -> Void)?) {
         self.init()
         self.pinchAction = action
         self.addTarget(self, action: #selector(BlockPinch.didPinch(_:)))
@@ -79,11 +79,11 @@ open class BlockPinch: UIPinchGestureRecognizer {
 open class BlockSwipe: UISwipeGestureRecognizer {
     private var swipeAction: ((UISwipeGestureRecognizer) -> Void)?
     
-    public override init(target: Any?, action: Selector?) {
+    override init(target: Any?, action: Selector?) {
         super.init(target: target, action: action)
     }
     
-    public convenience init (
+    convenience init (
         direction: UISwipeGestureRecognizer.Direction,
         fingerCount: Int = 1,
         action: ((UISwipeGestureRecognizer) -> Void)?) {
@@ -108,11 +108,11 @@ open class BlockSwipe: UISwipeGestureRecognizer {
 open class BlockLongPress: UILongPressGestureRecognizer {
     private var longPressAction: ((UILongPressGestureRecognizer) -> Void)?
     
-    public override init(target: Any?, action: Selector?) {
+    override init(target: Any?, action: Selector?) {
         super.init(target: target, action: action)
     }
     
-    public convenience init (action: ((UILongPressGestureRecognizer) -> Void)?) {
+    convenience init (action: ((UILongPressGestureRecognizer) -> Void)?) {
         self.init()
         longPressAction = action
         addTarget(self, action: #selector(BlockLongPress.didLongPressed(_:)))

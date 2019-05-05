@@ -9,9 +9,9 @@
 import UIKit
 
 // MARK: - Methods
-public extension UITabBarController {
+extension UITabBarController {
     
-    public func viewController(vcClass: Swift.AnyClass, title: String, image: UIImage, selectedImage: UIImage) -> UIViewController {
+    func viewController(vcClass: Swift.AnyClass, title: String, image: UIImage, selectedImage: UIImage) -> UIViewController {
         
         let cls = vcClass as! UIViewController.Type
         let vc = cls.init()
@@ -20,20 +20,22 @@ public extension UITabBarController {
         return vc
     }
     
-    public func navigationController(vcClass: Swift.AnyClass, title: String, image: UIImage, selectedImage: UIImage) -> UINavigationController {
+    func navigationController(vcClass: Swift.AnyClass, title: String, image: UIImage, selectedImage: UIImage) -> UINavigationController {
         
         let cls = vcClass as! UIViewController.Type
         let vc = cls.init()
         
         let nav: UINavigationController = UINavigationController.init(rootViewController: vc)
-        nav.tabBarItem = UITabBarItem.init(title: title, image: image, selectedImage: selectedImage)
+        nav.tabBarItem = UITabBarItem.init(title: title, image: image.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage.withRenderingMode(.alwaysOriginal))
         nav.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 20)]
         vc.navigationItem.title = title
+        nav.navigationBar.tintColor = .white
+        nav.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "nav_bg").changeImageSize(CGSize.init(width: kSCREEN_WIDTH, height: UIDevice.isIPhoneXSeries() ? 88 : 64)), for: .default)
         return nav
     }
 }
 
-public extension UIViewController {
+extension UIViewController {
     //添加子控制器
     func addChildVC(_ childVC: UIViewController) {
         addChild(childVC)

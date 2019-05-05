@@ -9,10 +9,10 @@
 import UIKit
 
 // MARK: - Properties
-public extension URL {
+extension URL {
     
     /// SwifterSwift: Dictionary of the URL's query parameters
-    public var queryParameters: [String: String]? {
+    var queryParameters: [String: String]? {
         guard let components = URLComponents(url: self, resolvingAgainstBaseURL: false), let queryItems = components.queryItems else { return nil }
         
         var items: [String: String] = [:]
@@ -26,7 +26,7 @@ public extension URL {
 }
 
 // MARK: - Methods
-public extension URL {
+extension URL {
     
     /// SwifterSwift: URL with appending query parameters.
     ///
@@ -36,7 +36,7 @@ public extension URL {
     ///
     /// - Parameter parameters: parameters dictionary.
     /// - Returns: URL with appending given query parameters.
-    public func appendingQueryParameters(_ parameters: [String: String]) -> URL {
+    func appendingQueryParameters(_ parameters: [String: String]) -> URL {
         var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: true)!
         var items = urlComponents.queryItems ?? []
         items += parameters.map({ URLQueryItem(name: $0, value: $1) })
@@ -52,7 +52,7 @@ public extension URL {
     ///        print(url) // prints "https://google.com?q=Swifter%20Swift"
     ///
     /// - Parameter parameters: parameters dictionary.
-    public mutating func appendQueryParameters(_ parameters: [String: String]) {
+    mutating func appendQueryParameters(_ parameters: [String: String]) {
         self = appendingQueryParameters(parameters)
     }
     

@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIButton {
     //显示网络图片
-    public func setImageWith(state: UIControl.State, urlStr: String) {
+    func setImageWith(state: UIControl.State, urlStr: String) {
         let url = URL.init(string: urlStr)
         DispatchQueue.global().async {
             if let image = try? UIImage.init(data: Data.init(contentsOf: url!)) {
@@ -21,7 +21,7 @@ public extension UIButton {
         }
     }
     //按钮倒计时
-    public func countDownTimer(timeout: Int, title: String, waitTitle: String) {
+    func countDownTimer(timeout: Int, title: String, waitTitle: String) {
         var count = timeout
         let timer =  DispatchSource.makeTimerSource(flags: [], queue:DispatchQueue.main)
         timer.schedule(wallDeadline: .now(), repeating: 1)
@@ -53,7 +53,7 @@ public extension UIButton {
         case bottom
         case right
     }
-    public func setImagePosition(style: UIButtonImagePositionStyle, padding: CGFloat) {
+    func setImagePosition(style: UIButtonImagePositionStyle, padding: CGFloat) {
         var titleInsets: UIEdgeInsets = .zero
         var imageInsets: UIEdgeInsets = .zero
         

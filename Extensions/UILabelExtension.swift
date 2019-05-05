@@ -9,16 +9,16 @@
 import UIKit
 
 // MARK: - Methods
-public extension UILabel {
+extension UILabel {
     
     /// SwifterSwift: Initialize a UILabel with text
-    public convenience init(text: String?) {
+    convenience init(text: String?) {
         self.init()
         self.text = text
     }
     
     /// SwifterSwift: Required height for a label
-    public var requiredHeight: CGFloat {
+    var requiredHeight: CGFloat {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: frame.width, height: CGFloat.greatestFiniteMagnitude))
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -29,7 +29,7 @@ public extension UILabel {
         return label.frame.height
     }
     /// 改变行间距
-    public func setAttributed(text: String, lineSpace: CGFloat) {
+    func setAttributed(text: String, lineSpace: CGFloat) {
         let attributedString = NSMutableAttributedString.init(string: text)
         let paragraphStyle = NSMutableParagraphStyle.init()
         paragraphStyle.lineSpacing = lineSpace

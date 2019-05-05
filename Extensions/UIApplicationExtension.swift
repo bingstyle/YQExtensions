@@ -8,21 +8,21 @@
 
 import UIKit
 
-public extension UIApplication {
+extension UIApplication {
     
-    public var appBundleName: String {
+    var appBundleName: String {
         return Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as! String
     }
     
-    public var appBundleID: String {
+    var appBundleID: String {
         return Bundle.main.object(forInfoDictionaryKey: kCFBundleIdentifierKey as String) as! String
     }
     
-    public var appVersion: String {
+    var appVersion: String {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     }
     
-    public var appBuildVersion: String {
+    var appBuildVersion: String {
         return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
     }
 }

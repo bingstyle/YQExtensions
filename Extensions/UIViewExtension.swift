@@ -9,9 +9,9 @@
 import UIKit
 
 // MARK: - Properties
-public extension UIView {
+extension UIView {
     /// SwifterSwift: First responder.
-    public var firstResponder: UIView? {
+    var firstResponder: UIView? {
         guard !isFirstResponder else { return self }
         for subView in subviews where subView.isFirstResponder {
             return subView
@@ -20,7 +20,7 @@ public extension UIView {
     }
     
     /// SwifterSwift: Check if view is in RTL format.
-    public var isRightToLeft: Bool {
+    var isRightToLeft: Bool {
         if #available(iOS 10.0, *, tvOS 10.0, *) {
             return effectiveUserInterfaceLayoutDirection == .rightToLeft
         } else {
@@ -29,7 +29,7 @@ public extension UIView {
     }
     
     /// SwifterSwift: Take screenshot of view (if applicable).
-    public var screenshot: UIImage? {
+    var screenshot: UIImage? {
         UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, 0)
         defer {
             UIGraphicsEndImageContext()
@@ -40,7 +40,7 @@ public extension UIView {
     }
     
     /// SwifterSwift: Get view's parent view controller
-    public var parentViewController: UIViewController? {
+    var parentViewController: UIViewController? {
         weak var parentResponder: UIResponder? = self
         while parentResponder != nil {
             parentResponder = parentResponder!.next
@@ -53,10 +53,10 @@ public extension UIView {
 }
 
 // MARK: - UI Properties
-public extension UIView {
+extension UIView {
     
     /// SwifterSwift: Border color of view; also inspectable from Storyboard.
-    @IBInspectable public var borderColor: UIColor? {
+    @IBInspectable var borderColor: UIColor? {
         get {
             guard let color = layer.borderColor else { return nil }
             return UIColor(cgColor: color)
@@ -73,7 +73,7 @@ public extension UIView {
     }
     
     /// SwifterSwift: Border width of view; also inspectable from Storyboard.
-    @IBInspectable public var borderWidth: CGFloat {
+    @IBInspectable var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }
@@ -83,7 +83,7 @@ public extension UIView {
     }
     
     /// SwifterSwift: Corner radius of view; also inspectable from Storyboard.
-    @IBInspectable public var cornerRadius: CGFloat {
+    @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -94,7 +94,7 @@ public extension UIView {
     }
     
     /// SwifterSwift: Shadow color of view; also inspectable from Storyboard.
-    @IBInspectable public var shadowColor: UIColor? {
+    @IBInspectable var shadowColor: UIColor? {
         get {
             guard let color = layer.shadowColor else { return nil }
             return UIColor(cgColor: color)
@@ -105,7 +105,7 @@ public extension UIView {
     }
     
     /// SwifterSwift: Shadow offset of view; also inspectable from Storyboard.
-    @IBInspectable public var shadowOffset: CGSize {
+    @IBInspectable var shadowOffset: CGSize {
         get {
             return layer.shadowOffset
         }
@@ -115,7 +115,7 @@ public extension UIView {
     }
     
     /// SwifterSwift: Shadow opacity of view; also inspectable from Storyboard.
-    @IBInspectable public var shadowOpacity: Float {
+    @IBInspectable var shadowOpacity: Float {
         get {
             return layer.shadowOpacity
         }
@@ -125,7 +125,7 @@ public extension UIView {
     }
     
     /// SwifterSwift: Shadow radius of view; also inspectable from Storyboard.
-    @IBInspectable public var shadowRadius: CGFloat {
+    @IBInspectable var shadowRadius: CGFloat {
         get {
             return layer.shadowRadius
         }
@@ -135,7 +135,7 @@ public extension UIView {
     }
     
     
-    public var x: CGFloat {
+    var x: CGFloat {
         get {
             return frame.origin.x
         } set(value) {
@@ -143,7 +143,7 @@ public extension UIView {
         }
     }
     
-    public var y: CGFloat {
+    var y: CGFloat {
         get {
             return frame.origin.y
         } set(value) {
@@ -151,7 +151,7 @@ public extension UIView {
         }
     }
     
-    public var width: CGFloat {
+    var width: CGFloat {
         get {
             return frame.size.width
         } set(value) {
@@ -159,7 +159,7 @@ public extension UIView {
         }
     }
     
-    public var height: CGFloat {
+    var height: CGFloat {
         get {
             return frame.size.height
         } set(value) {
@@ -167,7 +167,7 @@ public extension UIView {
         }
     }
     
-    public var size: CGSize {
+    var size: CGSize {
         get {
             return frame.size
         } set(value) {
@@ -175,7 +175,7 @@ public extension UIView {
         }
     }
     
-    public var left: CGFloat {
+    var left: CGFloat {
         get {
             return frame.origin.x
         } set(value) {
@@ -183,7 +183,7 @@ public extension UIView {
         }
     }
     
-    public var right: CGFloat {
+    var right: CGFloat {
         get {
             return frame.origin.x + frame.size.width
         } set(value) {
@@ -191,7 +191,7 @@ public extension UIView {
         }
     }
     
-    public var top: CGFloat {
+    var top: CGFloat {
         get {
             return frame.origin.y
         } set(value) {
@@ -199,7 +199,7 @@ public extension UIView {
         }
     }
     
-    public var bottom: CGFloat {
+    var bottom: CGFloat {
         get {
             return frame.origin.y + frame.size.height
         } set(value) {
@@ -207,7 +207,7 @@ public extension UIView {
         }
     }
     
-    public var origin: CGPoint {
+    var origin: CGPoint {
         get {
             return frame.origin
         } set(value) {
@@ -215,7 +215,7 @@ public extension UIView {
         }
     }
     
-    public var centerX: CGFloat {
+    var centerX: CGFloat {
         get {
             return center.x
         } set(value) {
@@ -223,7 +223,7 @@ public extension UIView {
         }
     }
     
-    public var centerY: CGFloat {
+    var centerY: CGFloat {
         get {
             return center.y
         } set(value) {
@@ -237,7 +237,7 @@ public extension UIView {
 extension UIView {
     /// http://stackoverflow.com/questions/4660371/how-to-add-a-touch-event-to-a-uiview/32182866#32182866
     /// EZSwiftExtensions
-    public func addTapGesture(tapNumber: Int = 1, target: AnyObject, action: Selector) {
+    func addTapGesture(tapNumber: Int = 1, target: AnyObject, action: Selector) {
         let tap = UITapGestureRecognizer(target: target, action: action)
         tap.numberOfTapsRequired = tapNumber
         addGestureRecognizer(tap)
@@ -245,14 +245,14 @@ extension UIView {
     }
     
     /// EZSwiftExtensions - Make sure you use  "[weak self] (gesture) in" if you are using the keyword self inside the closure or there might be a memory leak
-    public func addTapGesture(tapNumber: Int = 1, action: ((UITapGestureRecognizer) -> Void)?) {
+    func addTapGesture(tapNumber: Int = 1, action: ((UITapGestureRecognizer) -> Void)?) {
         let tap = BlockTap(tapCount: tapNumber, fingerCount: 1, action: action)
         addGestureRecognizer(tap)
         isUserInteractionEnabled = true
     }
     
     /// EZSwiftExtensions
-    public func addSwipeGesture(direction: UISwipeGestureRecognizer.Direction, numberOfTouches: Int = 1, target: AnyObject, action: Selector) {
+    func addSwipeGesture(direction: UISwipeGestureRecognizer.Direction, numberOfTouches: Int = 1, target: AnyObject, action: Selector) {
         let swipe = UISwipeGestureRecognizer(target: target, action: action)
         swipe.direction = direction
         
@@ -267,21 +267,21 @@ extension UIView {
     }
     
     /// EZSwiftExtensions - Make sure you use  "[weak self] (gesture) in" if you are using the keyword self inside the closure or there might be a memory leak
-    public func addSwipeGesture(direction: UISwipeGestureRecognizer.Direction, numberOfTouches: Int = 1, action: ((UISwipeGestureRecognizer) -> Void)?) {
+    func addSwipeGesture(direction: UISwipeGestureRecognizer.Direction, numberOfTouches: Int = 1, action: ((UISwipeGestureRecognizer) -> Void)?) {
         let swipe = BlockSwipe(direction: direction, fingerCount: numberOfTouches, action: action)
         addGestureRecognizer(swipe)
         isUserInteractionEnabled = true
     }
     
     /// EZSwiftExtensions
-    public func addPanGesture(target: AnyObject, action: Selector) {
+    func addPanGesture(target: AnyObject, action: Selector) {
         let pan = UIPanGestureRecognizer(target: target, action: action)
         addGestureRecognizer(pan)
         isUserInteractionEnabled = true
     }
     
     /// EZSwiftExtensions - Make sure you use  "[weak self] (gesture) in" if you are using the keyword self inside the closure or there might be a memory leak
-    public func addPanGesture(action: ((UIPanGestureRecognizer) -> Void)?) {
+    func addPanGesture(action: ((UIPanGestureRecognizer) -> Void)?) {
         let pan = BlockPan(action: action)
         addGestureRecognizer(pan)
         isUserInteractionEnabled = true
@@ -290,7 +290,7 @@ extension UIView {
     #if os(iOS)
     
     /// EZSwiftExtensions
-    public func addPinchGesture(target: AnyObject, action: Selector) {
+    func addPinchGesture(target: AnyObject, action: Selector) {
         let pinch = UIPinchGestureRecognizer(target: target, action: action)
         addGestureRecognizer(pinch)
         isUserInteractionEnabled = true
@@ -301,7 +301,7 @@ extension UIView {
     #if os(iOS)
     
     /// EZSwiftExtensions - Make sure you use  "[weak self] (gesture) in" if you are using the keyword self inside the closure or there might be a memory leak
-    public func addPinchGesture(action: ((UIPinchGestureRecognizer) -> Void)?) {
+    func addPinchGesture(action: ((UIPinchGestureRecognizer) -> Void)?) {
         let pinch = BlockPinch(action: action)
         addGestureRecognizer(pinch)
         isUserInteractionEnabled = true
@@ -310,14 +310,14 @@ extension UIView {
     #endif
     
     /// EZSwiftExtensions
-    public func addLongPressGesture(target: AnyObject, action: Selector) {
+    func addLongPressGesture(target: AnyObject, action: Selector) {
         let longPress = UILongPressGestureRecognizer(target: target, action: action)
         addGestureRecognizer(longPress)
         isUserInteractionEnabled = true
     }
     
     /// EZSwiftExtensions - Make sure you use  "[weak self] (gesture) in" if you are using the keyword self inside the closure or there might be a memory leak
-    public func addLongPressGesture(action: ((UILongPressGestureRecognizer) -> Void)?) {
+    func addLongPressGesture(action: ((UILongPressGestureRecognizer) -> Void)?) {
         let longPress = BlockLongPress(action: action)
         addGestureRecognizer(longPress)
         isUserInteractionEnabled = true
