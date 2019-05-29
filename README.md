@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/language-swift-orange.svg)
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/YQExtensions.svg)](https://cocoapods.org/pods/YQExtensions)
-![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
+![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)(https://github.com/Carthage/Carthage)
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 ## 安装
