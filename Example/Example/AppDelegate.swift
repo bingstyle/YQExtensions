@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  YQExtensionsDemo
+//  Example
 //
-//  Created by weixb on 2018/11/14.
-//  Copyright © 2018 weixb. All rights reserved.
+//  Created by WeiXinbing on 2019/5/29.
+//  Copyright © 2019 bing. All rights reserved.
 //
 
 import UIKit

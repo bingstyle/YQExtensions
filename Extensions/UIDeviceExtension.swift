@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIDevice {
+public extension UIDevice {
     
     static func isIPhoneXSeries() -> Bool {
         var flag = false

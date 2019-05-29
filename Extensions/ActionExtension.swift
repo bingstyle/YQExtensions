@@ -30,7 +30,7 @@ private func register<T>(_ actor: Actor<T>, to object: AnyObject) {
     room.actors.append(actor)
 }
 
-protocol ActionClosurable {}
+public protocol ActionClosurable {}
 extension ActionClosurable where Self: AnyObject {
     func convert(closure: @escaping (Self) -> Void, toConfiguration configure: (AnyObject, Selector) -> Void) {
         let actor = Actor(acts: closure)
@@ -47,7 +47,7 @@ extension ActionClosurable where Self: AnyObject {
 
 extension NSObject: ActionClosurable {}
 
-extension ActionClosurable where Self: UIControl {
+public extension ActionClosurable where Self: UIControl {
     func on(_ controlEvents: UIControl.Event, closure: @escaping (Self) -> Void) {
         convert(closure: closure, toConfiguration: {
             self.addTarget($0, action: $1, for: controlEvents)
@@ -55,7 +55,7 @@ extension ActionClosurable where Self: UIControl {
     }
 }
 
-extension ActionClosurable where Self: UIButton {
+public extension ActionClosurable where Self: UIButton {
     func onTap(_ closure: @escaping (Self) -> Void) {
         on(.touchUpInside, closure: closure)
     }
