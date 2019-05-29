@@ -31,7 +31,8 @@ private func register<T>(_ actor: Actor<T>, to object: AnyObject) {
 }
 
 public protocol ActionClosurable {}
-extension ActionClosurable where Self: AnyObject {
+
+public extension ActionClosurable where Self: AnyObject {
     func convert(closure: @escaping (Self) -> Void, toConfiguration configure: (AnyObject, Selector) -> Void) {
         let actor = Actor(acts: closure)
         configure(actor, #selector(Actor<AnyObject>.act(sender:)))
@@ -61,7 +62,7 @@ public extension ActionClosurable where Self: UIButton {
     }
 }
 
-extension ActionClosurable where Self: UIRefreshControl {
+public extension ActionClosurable where Self: UIRefreshControl {
     func onValueChanged(closure: @escaping (Self) -> Void) {
         on(.valueChanged, closure: closure)
     }
@@ -73,7 +74,7 @@ extension ActionClosurable where Self: UIRefreshControl {
 }
 
 
-extension ActionClosurable where Self: UIGestureRecognizer {
+public extension ActionClosurable where Self: UIGestureRecognizer {
     func onGesture(_ closure: @escaping (Self) -> Void) {
         convert(closure: closure, toConfiguration: {
             self.addTarget($0, action: $1)
@@ -85,7 +86,7 @@ extension ActionClosurable where Self: UIGestureRecognizer {
     }
 }
 
-extension ActionClosurable where Self: UIBarButtonItem {
+public extension ActionClosurable where Self: UIBarButtonItem {
     init(title: String, style: UIBarButtonItem.Style, closure: @escaping (Self) -> Void) {
         self.init()
         self.title = title

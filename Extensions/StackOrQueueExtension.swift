@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Stack<Element> {
+public struct Stack<Element> {
     
     private var stack = [Element]()
     
@@ -33,7 +33,7 @@ struct Stack<Element> {
 }
 
 
-struct Queue<Element> {
+public struct Queue<Element> {
     
     private var left = [Element]()
     private var right = [Element]()

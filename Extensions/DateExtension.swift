@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Enums
-extension Date {
+public extension Date {
     
     /// SwifterSwift: Day name format.
     ///
@@ -36,7 +36,7 @@ extension Date {
 }
 
 // MARK: - Properties
-extension Date {
+public extension Date {
     
     /// SwifterSwift: User’s current calendar.
     var calendar: Calendar {
@@ -457,7 +457,7 @@ extension Date {
 }
 
 // MARK: - Methods
-extension Date {
+public extension Date {
     
     /// SwifterSwift: Date by adding multiples of calendar component.
     ///
@@ -883,7 +883,7 @@ extension Date {
 }
 
 // MARK: - Initializers
-extension Date {
+public extension Date {
     
     /// SwifterSwift: Create a new date form calendar components.
     ///

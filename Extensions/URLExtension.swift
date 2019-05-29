@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Properties
-extension URL {
+public extension URL {
     
     /// SwifterSwift: Dictionary of the URL's query parameters
     var queryParameters: [String: String]? {
@@ -26,7 +26,7 @@ extension URL {
 }
 
 // MARK: - Methods
-extension URL {
+public extension URL {
     
     /// SwifterSwift: URL with appending query parameters.
     ///

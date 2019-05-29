@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
     
     var appBundleName: String {
         return Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as! String

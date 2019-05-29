@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Properties
-extension UIColor {
+public extension UIColor {
     
     static var yq_randomColor: UIColor {
         let r = CGFloat(arc4random_uniform(255))
@@ -30,7 +30,7 @@ extension UIColor {
 }
 
 // MARK: - Initializers
-extension UIColor {
+public extension UIColor {
     
     convenience init?(red r: Int, green g: Int, blue b: Int, alpha: CGFloat = 1) {
         guard r >= 0 && r <= 255 else { return nil }

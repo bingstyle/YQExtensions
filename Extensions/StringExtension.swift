@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Properties
-extension String {
+public extension String {
     // 中文转拼音
     func toPinyin() -> String {
         let stringRef = NSMutableString(string: self) as CFMutableString
@@ -389,7 +389,7 @@ extension String {
 }
 
 // MARK: - Methods
-extension String {
+public extension String {
     
     /// Float value from string (if applicable).
     ///
@@ -907,7 +907,7 @@ extension String {
 }
 
 // MARK: - Operators
-extension String {
+public extension String {
     
     /// SwifterSwift: Repeat string multiple times.
     ///
@@ -938,7 +938,7 @@ extension String {
 }
 
 // MARK: - Initializers
-extension String {
+public extension String {
     
     /// SwifterSwift: Create a new string from a base64 string (if applicable).
     ///
@@ -963,7 +963,7 @@ extension String {
 }
 
 // MARK: - NSAttributedString extensions
-extension String {
+public extension String {
     
     #if !os(tvOS) && !os(watchOS)
     /// SwifterSwift: Bold string.
@@ -1014,7 +1014,7 @@ extension String {
 }
 
 // MARK: - NSString extensions
-extension String {
+public extension String {
     
     /// SwifterSwift: NSString from a string.
     var nsString: NSString {
@@ -1064,7 +1064,7 @@ extension String {
     
 }
 
-extension String {
+public extension String {
     func yq_widthForComment(fontSize: CGFloat, height: CGFloat = 15) -> CGFloat {
         let font = UIFont.systemFont(ofSize: fontSize)
         let rect = NSString(string: self).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: height), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)

@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Methods
-extension UITabBarController {
+public extension UITabBarController {
     
     func viewController(vcClass: Swift.AnyClass, title: String, image: UIImage, selectedImage: UIImage) -> UIViewController {
         
@@ -35,7 +35,7 @@ extension UITabBarController {
     }
 }
 
-extension UIViewController {
+public extension UIViewController {
     //添加子控制器
     func addChildVC(_ childVC: UIViewController) {
         addChild(childVC)

@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Methods
-extension UITextView {
+public extension UITextView {
     func setPlaceHolder(text: String, color: UIColor = .lightGray) {
         let label = UILabel()
         label.text = text

@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Properties
-extension UIView {
+public extension UIView {
     /// SwifterSwift: First responder.
     var firstResponder: UIView? {
         guard !isFirstResponder else { return self }
@@ -53,7 +53,7 @@ extension UIView {
 }
 
 // MARK: - UI Properties
-extension UIView {
+public extension UIView {
     
     /// SwifterSwift: Border color of view; also inspectable from Storyboard.
     @IBInspectable var borderColor: UIColor? {
@@ -234,7 +234,7 @@ extension UIView {
 }
 
 // MARK: Gesture Extensions
-extension UIView {
+public extension UIView {
     /// http://stackoverflow.com/questions/4660371/how-to-add-a-touch-event-to-a-uiview/32182866#32182866
     /// EZSwiftExtensions
     func addTapGesture(tapNumber: Int = 1, target: AnyObject, action: Selector) {

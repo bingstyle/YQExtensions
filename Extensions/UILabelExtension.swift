@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Methods
-extension UILabel {
+public extension UILabel {
     
     /// SwifterSwift: Initialize a UILabel with text
     convenience init(text: String?) {

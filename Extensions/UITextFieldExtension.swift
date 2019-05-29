@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Limit
-extension UITextField {
+public extension UITextField {
     private struct AssociatedKeys {
         static var maxLength = "yq_maxLength"
     }
@@ -45,7 +45,7 @@ extension UITextField {
 }
 
 // MARK: - Enums
-extension UITextField {
+public extension UITextField {
     
     /// SwifterSwift: UITextField text type.
     ///
@@ -61,7 +61,7 @@ extension UITextField {
 }
 
 // MARK: - Properties
-extension UITextField {
+public extension UITextField {
     
     /// SwifterSwift: Set textField for common text types.
     var textType: TextType {
@@ -150,7 +150,7 @@ extension UITextField {
 }
 
 // MARK: - Methods
-extension UITextField {
+public extension UITextField {
     
     /// SwifterSwift: Clear text.
     func clear() {

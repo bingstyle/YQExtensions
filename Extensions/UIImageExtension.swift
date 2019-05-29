@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Properties
-extension UIImage {
+public extension UIImage {
     
     /// SwifterSwift: Size in bytes of UIImage
     var bytesSize: Int {
@@ -34,7 +34,7 @@ extension UIImage {
 }
 
 // MARK: - Methods
-extension UIImage {
+public extension UIImage {
     //改变图片大小
     func changeImageSize(_ size: CGSize) -> UIImage? {
         UIGraphicsBeginImageContext(size)
@@ -172,7 +172,7 @@ extension UIImage {
 }
 
 // MARK: - Initializers
-extension UIImage {
+public extension UIImage {
     
     /// SwifterSwift: Create UIImage from color and size.
     ///
