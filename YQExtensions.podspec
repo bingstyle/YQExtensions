@@ -1,9 +1,9 @@
 
 
 Pod::Spec.new do |s|
-s.name         = "WXBExtensions"
+s.name         = "YQExtensions"
 s.version      = "0.2.5"
-s.ios.deployment_target = '9.0'
+s.ios.deployment_target = '10.0'
 s.summary      = "some extensions"
 s.homepage     = "https://github.com/weixinbing/YQTools"
 s.license              = { :type => "MIT", :file => "LICENSE" }

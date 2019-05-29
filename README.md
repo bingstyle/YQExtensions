@@ -1,15 +1,30 @@
 # YQExtensions
 
 ![](https://img.shields.io/badge/language-swift-orange.svg)
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/SnapKit.svg)](https://cocoapods.org/pods/WXBExtensions)
 ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 ## 安装
-### Carthage
+### CocoaPods
 
-在你的 Cartfile 中添加下面的代码：
+在Podfile添加下面的代码：
 
+```ruby
+pod 'YQExtensions'
 ```
+
+然后，运行以下命令：
+
+```ruby
+$ pod install
+```
+
+### Carthage
+在Cartfile中添加下面的代码：
+
+
+```ruby
 github "weixinbing/YQExtensions"
 ```
 
