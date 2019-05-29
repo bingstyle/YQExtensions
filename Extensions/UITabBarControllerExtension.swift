@@ -30,7 +30,7 @@ extension UITabBarController {
         nav.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 20)]
         vc.navigationItem.title = title
         nav.navigationBar.tintColor = .white
-        nav.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "nav_bg").changeImageSize(CGSize.init(width: kSCREEN_WIDTH, height: UIDevice.isIPhoneXSeries() ? 88 : 64)), for: .default)
+        nav.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "nav_bg").changeImageSize(CGSize.init(width: UIScreen.main.bounds.width, height: UIDevice.isIPhoneXSeries() ? 88 : 64)), for: .default)
         return nav
     }
 }
