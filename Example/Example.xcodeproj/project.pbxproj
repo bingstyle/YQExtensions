@@ -33,6 +33,7 @@
 		2D1E0F32229E5B6F00F9423B /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E0F1D229E5B6F00F9423B /* DoubleExtension.swift */; };
 		2D1E0F33229E5B6F00F9423B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E0F1E229E5B6F00F9423B /* DateExtension.swift */; };
 		2D1E0F34229E5B6F00F9423B /* ActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E0F1F229E5B6F00F9423B /* ActionExtension.swift */; };
+		2DCA6D9022DF185C00C76CE9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCA6D8F22DF185C00C76CE9 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		2D1E0F1D229E5B6F00F9423B /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		2D1E0F1E229E5B6F00F9423B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		2D1E0F1F229E5B6F00F9423B /* ActionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionExtension.swift; sourceTree = "<group>"; };
+		2DCA6D8F22DF185C00C76CE9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				2D1E0F10229E5B6F00F9423B /* UITextFieldExtension.swift */,
 				2D1E0F0F229E5B6F00F9423B /* UITextViewExtension.swift */,
 				2D1E0F15229E5B6F00F9423B /* UIViewExtension.swift */,
+				2DCA6D8F22DF185C00C76CE9 /* UIViewControllerExtension.swift */,
 				2D1E0F16229E5B6F00F9423B /* URLExtension.swift */,
 			);
 			name = Extensions;
@@ -227,6 +230,7 @@
 				2D1E0F33229E5B6F00F9423B /* DateExtension.swift in Sources */,
 				2D1E0F29229E5B6F00F9423B /* CGFloatExtension.swift in Sources */,
 				2D1E0F30229E5B6F00F9423B /* StringExtension.swift in Sources */,
+				2DCA6D9022DF185C00C76CE9 /* UIViewControllerExtension.swift in Sources */,
 				2D1E0F23229E5B6F00F9423B /* UIColorExtension.swift in Sources */,
 				2D1E0F34229E5B6F00F9423B /* ActionExtension.swift in Sources */,
 				2D1E0F2E229E5B6F00F9423B /* UITabBarControllerExtension.swift in Sources */,

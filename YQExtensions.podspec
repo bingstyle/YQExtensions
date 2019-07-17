@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
 s.name         = "YQExtensions"
-s.version      = "0.3.0"
+s.version      = "0.3.1"
 s.ios.deployment_target = '10.0'
 s.summary      = "some extensions"
 s.homepage     = "https://github.com/weixinbing/YQTools"
