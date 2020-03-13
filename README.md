@@ -35,3 +35,33 @@ $ carthage update
 ```
 
 如果这是你首次在项目中使用 Carthage，你将需要进行一些额外的步骤，它们在 [Carthage](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) 中有解释。
+
+### Swift Package Manager
+
+```ruby
+https://github.com/bingstyle/YQExtensions
+```
+
+要使用苹果的 Swift Package Manager 集成，将以下内容作为依赖添加到你的 `Package.swift`：
+
+```swift
+// swift-tools-version:5.0
+import PackageDescription
+
+let package = Package(
+    name: "MyPackage",
+    products: [
+        .library(
+            name: "MyPackage",
+            targets: ["MyPackage"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/bingstyle/YQExtensions", .upToNextMajor(from: "0.3.2"))
+    ],
+    targets: [
+        .target(
+            name: "MyPackage",
+            dependencies: ["YQExtensions"])
+    ]
+)
+```
