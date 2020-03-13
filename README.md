@@ -38,30 +38,7 @@ $ carthage update
 
 ### Swift Package Manager
 
+File -> Swift Package -> Add Package Dependency…
 ```ruby
 https://github.com/bingstyle/YQExtensions
-```
-
-要使用苹果的 Swift Package Manager 集成，将以下内容作为依赖添加到你的 `Package.swift`：
-
-```swift
-// swift-tools-version:5.0
-import PackageDescription
-
-let package = Package(
-    name: "MyPackage",
-    products: [
-        .library(
-            name: "MyPackage",
-            targets: ["MyPackage"]),
-    ],
-    dependencies: [
-        .package(url: "https://github.com/bingstyle/YQExtensions", .upToNextMajor(from: "0.3.2"))
-    ],
-    targets: [
-        .target(
-            name: "MyPackage",
-            dependencies: ["YQExtensions"])
-    ]
-)
 ```
