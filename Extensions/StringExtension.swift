@@ -374,6 +374,9 @@ public extension String {
         return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
     
+    var urlPathEncoded: String {
+        return addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!
+    }
     /// SwifterSwift: String without spaces and new lines.
     ///
     ///        "   \n Swifter   \n  Swift  ".withoutSpacesAndNewLines -> "SwifterSwift"
@@ -822,6 +825,12 @@ public extension String {
     ///
     mutating func urlEncode() {
         if let encoded = addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
+            self = encoded
+        }
+    }
+    
+    mutating func urlPathEncode() {
+        if let encoded = addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) {
             self = encoded
         }
     }

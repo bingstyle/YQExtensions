@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0F7BFA24343C78008BDDC3 /* YQExtensions.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2D0F7BF924343C78008BDDC3 /* YQExtensions.podspec */; };
 		2D1E0EF9229E5B3900F9423B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E0EF8229E5B3900F9423B /* AppDelegate.swift */; };
 		2D1E0EFB229E5B3900F9423B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E0EFA229E5B3900F9423B /* ViewController.swift */; };
 		2D1E0EFE229E5B3900F9423B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D1E0EFC229E5B3900F9423B /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D0F7BF924343C78008BDDC3 /* YQExtensions.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = YQExtensions.podspec; path = ../../YQExtensions.podspec; sourceTree = "<group>"; };
 		2D1E0EF5229E5B3900F9423B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1E0EF8229E5B3900F9423B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D1E0EFA229E5B3900F9423B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				2D1E0EF8229E5B3900F9423B /* AppDelegate.swift */,
 				2D1E0EFA229E5B3900F9423B /* ViewController.swift */,
+				2D0F7BF924343C78008BDDC3 /* YQExtensions.podspec */,
 				2D1E0EFC229E5B3900F9423B /* Main.storyboard */,
 				2D1E0EFF229E5B3A00F9423B /* Assets.xcassets */,
 				2D1E0F01229E5B3A00F9423B /* LaunchScreen.storyboard */,
@@ -199,6 +202,7 @@
 			files = (
 				2D1E0F03229E5B3A00F9423B /* LaunchScreen.storyboard in Resources */,
 				2D1E0F00229E5B3A00F9423B /* Assets.xcassets in Resources */,
+				2D0F7BFA24343C78008BDDC3 /* YQExtensions.podspec in Resources */,
 				2D1E0EFE229E5B3900F9423B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
